@@ -1,0 +1,182 @@
+
+.news {
+  height: 600px;
+  background-image:url("http://120.78.138.104/images/HL-website/news.jpg");
+}
+.news-top {
+  text-align: center;
+  color: black;
+}
+.news-top h1 {
+  font-size: 44px;
+  margin:0;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+.news-top p {
+  margin: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.news-top .line {
+  height: 2px;
+  background-color: white;
+}
+.news .s-line {
+  width: 135px;
+  height: 3px;
+  background-color: #03a9f4;
+  margin: 0 auto;
+}
+.news-bottom {
+  position: relative;
+  height: 470px;
+  padding-top: 99px;
+  overflow: hidden;
+}
+/*.bottomr {*/
+  /*margin: 0 -50px 0 -50px;*/
+  /*height: 280px;*/
+/*}*/
+.bottom1 {
+  position: relative;
+  /*float: left;*/
+  /*overflow: hidden;*/
+  background:gray;
+  /*width: 49%;*/
+  height: 280px;
+  border: 10px solid white;
+}
+.bottom1 .box {
+  position: absolute;
+  right: 10px;
+  bottom: -2px;
+}
+.bottom1 ul {
+  overflow: hidden;
+  list-style: none;
+}
+.bottom1 li {
+  float: right;
+  width: 15px;
+  height: 15px;
+  margin-left: 10px;
+  background: white;
+}
+.bottom2 {
+  position: relative;
+  /*float: right;*/
+  /*width:49%;*/
+  height: 280px;
+}
+.bottom2 .table1 {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background:#F74D34;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  top:-34px;
+  left: 195px;
+}
+.bottom2 .table1:hover {
+  cursor: pointer;
+}
+.bottom2 .table2 {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  background:#1F6FE5;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  color: white;
+  top:-34px;
+  left: 310px;
+}
+.bottom2 .table2:hover {
+  cursor: pointer;
+}
+.bottom2 .newss {
+  height: 80px;
+  background: white;
+  margin-bottom: 20px;
+  padding: 4px 0 4px 0;
+}
+.bottom-news {
+  height: 100%;
+  width: 100%;
+}
+.bottom-news .l{
+  float: left;
+  height: 100%;
+  width: 20%;
+  background: rgb(250,100,75);
+  text-align: center;
+  padding-top: 17px;
+  color: white;
+}
+.bottom-news .r {
+  float: left;
+  height: 100%;
+  /*width: 82%;*/
+  text-align: left;
+  color: black;
+  padding:4px 0 0 15px;
+}
+.bottom-news .r h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin:0;
+  margin-bottom: 5px;
+
+}
+.bottom-news .r p {
+  font-size: 10px;
+  margin-bottom:0 ;
+}
+.bottom-question {
+  height: 280px;
+  background:white;
+  padding:22px 0 22px 20px;
+}
+.bottom-question .questions1{
+  background-color: white;
+  height:75px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+
+}
+.bottom-question i {
+  color: white;
+  width: 25px;
+  height: 25px;
+  margin:0 10px 10px 0;
+  font-size: 16px;
+  line-height: 25px;
+  background: red;
+  text-align: center;
+}
+.bottom-question .a {
+  display: inline-block;
+  color: white;
+  width: 25px;
+  height: 25px;
+  margin:0 10px 10px 0;
+  font-size: 19px;
+  line-height: 25px;
+  background: red;
+  text-align: center;
+}
+.bottom-question .questions2 {
+  background-color: white;
+  height:75px;
+  margin: 10px 0 10px 0;
+  border-bottom: 1px solid black;
+}
+.bottom-question .questions3 {
+  background-color: white;
+  height:75px;
+}

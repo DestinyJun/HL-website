@@ -1,0 +1,13 @@
+.pagination > li > a, .pagination > li{
+  margin-right: 10px;
+}
+.pagination > li > a, .pagination > li > span {
+  padding: 6px 12px;
+  margin-left: -1px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > li > a, .pagination > li:hover {
+  cursor: pointer;
+}

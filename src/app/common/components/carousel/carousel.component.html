@@ -1,0 +1,8 @@
+<div  class="banner" data-ride="carousel" [ngStyle]="{'height': h-80 + 'px'}">
+  <carousel>
+    <slide *ngFor="let item of photoList">
+     <div style="background:no-repeat center center;-webkit-background-size: cover;background-size: cover;" [ngStyle]="{'height': h-80 + 'px','background-image': 'url('+item.imgUrl+')'}"></div>
+    </slide>
+  </carousel>
+</div>
+

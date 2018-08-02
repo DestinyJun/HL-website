@@ -1,0 +1,23 @@
+.banner {
+  position: relative;
+  height: 400px;
+  text-align: center;
+  background-color:#CED3D6;
+}
+
+
+/*bootstrap改造*/
+/*@media (min-width: 1200px)*/
+          /*.container {*/
+            /*width: 1200px;*/
+          /*}*/
+
+  /*@media (min-width: 992px)*/
+            /*.container {*/
+              /*width: 970px;*/
+            /*}*/
+    /*@media (min-width: 768px)*/
+              /*.container {*/
+                /*width: 750px;*/
+              /*}*/
+

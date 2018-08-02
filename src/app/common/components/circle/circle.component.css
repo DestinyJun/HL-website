@@ -1,0 +1,25 @@
+.circu {
+  position: fixed;
+  right: 13px;
+  top:50%;
+  margin-top: -70px;
+}
+.circu ul {
+  float: right;
+  padding-left: 0;
+  position: relative;
+  list-style: none;
+  top: 35%;
+}
+.circu li {
+  display: block;
+  width: 13px;
+  height: 13px;
+  margin-top:13px;
+  border-radius: 20px;
+  background-color:white;
+  box-shadow: -1px 1px 5px #a2a0a0;
+}
+.circu li:hover {
+  background-color: rgb(250,100,75);
+}

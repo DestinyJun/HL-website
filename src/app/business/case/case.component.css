@@ -1,0 +1,43 @@
+.caselist {
+  padding: 60px 0 60px 0;
+}
+.search {
+  margin-bottom: 20px;
+}
+.picturelist .picture {
+  height: 180px;
+  background: pink;
+}
+.picturelist {
+  text-align: center;
+  /*width: 164px;*/
+}
+.picturelist .pic {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.picturelist p {
+  padding: 15px 10px 0 10px;
+  font-size: 16px;
+  width: 232px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.picturelist ul {
+  display:inline-block;
+  list-style: none;
+  overflow: hidden;
+
+}
+.picturelist ul li {
+  float: left;
+  margin-right: 15px;
+  /*background: #D3DBDB;*/
+}
+.list-group .list-group-item {
+  border: none;
+}
+
+

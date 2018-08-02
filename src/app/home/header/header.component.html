@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="logo">
+          <img src="http://120.78.138.104/images/HL-website/logo.png" height="63px"/>
+        </div>
+        <div class="name">
+          <span class="h3">贵阳红鸟智能技术服务有限公司</span><br>
+          <span>GUIZHOU RED BIRD INTELLIGNT TECHNOLOLOGY SERVICE CO.,LTD.</span>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="navlist">
+          <ul>
+            <li class="text-center" [ngClass]="{'active': item.name==name, 'unactive': !(item.name==name)}" (click)="putName(item.name)" *ngFor="let item of navList" [routerLink]="[item.url]">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

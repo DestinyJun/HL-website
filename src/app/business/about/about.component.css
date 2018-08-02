@@ -1,0 +1,62 @@
+.classify {
+  text-align: center;
+  /*margin: 0 auto;*/
+}
+.classify ul {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  background: white;
+  text-align: center;
+}
+.classify li {
+  width: 190px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  border-bottom: 2px solid #D5D5D5;
+  letter-spacing:3px;
+  margin-bottom: 10px;
+}
+.classify li:hover {
+  background:#21A0DE;
+  cursor: pointer;
+  color: white;
+  font-size: 18px;
+}
+.active{
+  background:#21A0DE;
+  color: white;
+}
+.unactive{
+  color: black;
+  background-color: transparent;
+}
+/*右栏内容详情*/
+ .word .basic p {
+   margin-top:12px;
+   /*margin-bottom: 0;*/
+   line-height: 30px;
+   font-size: 15px;
+   text-indent:28px;
+ }
+.word h3 {
+  margin: 0;
+  width: 230px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid rgba(33,160,222,0.5);
+  margin-bottom: 15px;
+}
+.word .person p {
+  /*margin-top: 12px;*/
+}
+.word .project h4 {
+  font-weight: bold;
+}
+.word .project p {
+  text-indent: 2em;
+}
+.word .plane p {
+  text-indent: 2em;
+}
+

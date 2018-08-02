@@ -1,0 +1,43 @@
+.main {
+  padding: 60px 0 60px 0;
+}
+.main-left{
+  height: 500px;
+  /*background: orangered;*/
+}
+
+.main-left .picture {
+  /*background: #000;*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  height: 200px;
+
+}
+.main-left .content {
+}
+.main-left .content h3{
+  margin: 0;
+  text-align: left;
+  font-size: 22px;
+}
+.main-left .content h3:hover {
+  cursor: pointer;
+}
+.main-left .content p {
+  margin-top: 25px;
+  font-size: 16px;
+  text-align: left;
+}
+.main-left .content .view {
+  text-align: left;
+
+}
+.main-left .content .view span {
+  margin-right: 20px;
+}
+.main-right .subject {
+
+}
+
+

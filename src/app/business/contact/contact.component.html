@@ -1,0 +1,26 @@
+<app-banner [imageUrl]="picture"></app-banner>
+<div class="aboutlist" style="margin:60px 0 60px 0">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-5">
+        <div class="contact">
+          <div class="div1">联系方式</div>
+          <div class="div2">
+            <h2>{{companyInFormation?.companyName}}</h2>
+            <p>邮箱 ：{{companyInFormation?.email}}</p>
+            <p>地址 ：{{companyInFormation?.companyAddress}}</p>
+            <p>邮编 ：{{companyInFormation?.postcode}}</p>
+            <p>电话 ：{{companyInFormation?.companyPhone}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-7">
+        <div class="bmap">
+          <div class="map" id="contactMap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

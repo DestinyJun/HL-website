@@ -1,0 +1,18 @@
+.news-foot{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 9999;
+}
+.message{
+  height: 30px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  text-align: center;
+  line-height: 30px;
+  font-size: 10px;
+}
+.message  span{
+  margin-right: 20px;
+  color: white;
+}

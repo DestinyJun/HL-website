@@ -1,0 +1,15 @@
+.main-right{
+  height: 500px;
+}
+ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+li {
+  width: 250px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
