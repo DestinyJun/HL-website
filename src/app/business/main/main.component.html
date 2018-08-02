@@ -1,8 +1,10 @@
-<div class="main">
-  <div class="content" style="padding-top: 80px" [ngStyle]="{'top': divhei + 'px'}">
+<div class="main" [ngStyle]="{'height': h + 'px'}">
+  <div class="content" [ngStyle]="{'top': divhei + 'px'}">
     <app-carousel [h]="h"></app-carousel>
     <app-home-aboutus [h]="h"></app-home-aboutus>
-    <!--<app-home-news></app-home-news>-->
+    <app-home-news [h]="h"></app-home-news>
+    <app-parting-line></app-parting-line>
+    <app-circle></app-circle>
   </div>
 </div>
 

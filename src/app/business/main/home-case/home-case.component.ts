@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {LoginService} from '../../../common/services/login.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class HomeCaseComponent implements OnInit {
     {imgUrl:'/assets/images/2.jpg',caseName:'贵州彩铝项目',caseSummary:'放声大哭解放军的烧烤架飞机的咖啡机' },
     {imgUrl:'/assets/images/2.jpg',caseName:'贵州彩铝项目',caseSummary:'放声大哭解放军的烧烤架飞机的咖啡机' },
   ];*/
+  @Input() h: number;
   public caseList: any;
   constructor(
     private logins: LoginService

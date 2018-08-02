@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {LoginService} from '../../../common/services/login.service';
 
 @Component({
@@ -7,6 +7,7 @@ import {LoginService} from '../../../common/services/login.service';
   styleUrls: ['./home-news.component.css']
 })
 export class HomeNewsComponent implements OnInit {
+  @Input() h: number;
   public flag  = true;
   public newsList: any;
   public qusitionList: any;
