@@ -1,7 +1,12 @@
-
 .news {
-  height: 600px;
   background-image:url("http://120.78.138.104/images/HL-website/news.jpg");
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+}
+.content {
+  width: 100%;
 }
 .news-top {
   text-align: center;
@@ -11,41 +16,31 @@
   font-size: 44px;
   margin:0;
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 .news-top p {
   margin: 0;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 .news-top .line {
-  height: 2px;
+  height: 3px;
   background-color: white;
 }
 .news .s-line {
   width: 135px;
-  height: 3px;
+  height: 4px;
   background-color: #03a9f4;
   margin: 0 auto;
 }
 .news-bottom {
-  position: relative;
-  height: 470px;
-  padding-top: 99px;
-  overflow: hidden;
+  margin-top: 30px;
 }
-/*.bottomr {*/
-  /*margin: 0 -50px 0 -50px;*/
-  /*height: 280px;*/
-/*}*/
 .bottom1 {
   position: relative;
-  /*float: left;*/
-  /*overflow: hidden;*/
   background:gray;
-  /*width: 49%;*/
-  height: 280px;
-  border: 10px solid white;
+  height: 250px;
+  border: 3px solid white;
 }
 .bottom1 .box {
   position: absolute;
@@ -67,7 +62,7 @@
   position: relative;
   /*float: right;*/
   /*width:49%;*/
-  height: 280px;
+  height: 250px;
 }
 .bottom2 .table1 {
   position: absolute;
@@ -100,7 +95,7 @@
   cursor: pointer;
 }
 .bottom2 .newss {
-  height: 80px;
+  height: 71px;
   background: white;
   margin-bottom: 20px;
   padding: 4px 0 4px 0;
@@ -138,13 +133,13 @@
   margin-bottom:0 ;
 }
 .bottom-question {
-  height: 280px;
+  height: 250px;
   background:white;
   padding:22px 0 22px 20px;
 }
 .bottom-question .questions1{
   background-color: white;
-  height:75px;
+  height:71px;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 

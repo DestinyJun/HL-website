@@ -1,51 +1,55 @@
 <div class="news" [ngStyle]="{'height': h + 'px'}" style="padding-top: 80px">
-  <div class="news-top">
-    <h1>NEWS CENTER</h1>
-    <div class="line">
-      <div class="s-line"></div>
-    </div>
-    <p>新闻中心</p>
-  </div>
-  <div class="container">
-    <div class="row" style="padding: 100px">
-      <div class="col-lg-6 col-md-6">
-        <div class="bottom1">
-          <carousel>
-            <slide *ngFor="let item of newsPhotoList">
-              <img [src]="item.imgUrl" alt="first slide" style="display: block; height:280px;width:100%;">
-              <div class="carousel-caption d-none d-md-block">
-                <h4>{{item.newsTitle}}</h4>
-              </div>
-            </slide>
-          </carousel>
-        </div>
+  <div class="content">
+    <div class="news-top">
+      <h1>NEWS CENTER</h1>
+      <div class="line">
+        <div class="s-line"></div>
       </div>
-      <div class="col-lg-6 col-md-6">
-        <div class="bottom2">
-          <div #text1 class="table1" (click)="clickNews($event,text2)">公司新闻</div>
-          <div #text2 class="table2" (click)="clickQuestion($event,text1)">资讯讨论</div>
-          <div class="new-box" *ngIf="flag">
-            <div class="newss" *ngFor="let item of newsList">
-              <div class="bottom-news">
-                <div class="l">
-                  <span>发布时间</span>
-                  <span>{{item.publishDate | date: 'yyyy-MM-dd' }}</span>
-                </div>
-                <div class="r">
-                  <h4>{{item.newsTitle}}</h4>
-                  <p style="margin-top: 10px">{{item.newsSummary}}</p>
-                </div>
-              </div>
+      <p>新闻中心</p>
+    </div>
+    <div class="news-bottom">
+      <div class="container">
+        <div class="row" style="">
+          <div class="col-lg-6 col-md-6">
+            <div class="bottom1">
+              <carousel>
+                <slide *ngFor="let item of newsPhotoList">
+                  <img [src]="item.imgUrl" alt="first slide" style="display: block; height:250px;width:100%;">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h4>{{item.newsTitle}}</h4>
+                  </div>
+                </slide>
+              </carousel>
             </div>
           </div>
-          <div class="bottom-question" *ngIf="!flag" >
-            <div class="questions1" *ngFor="let itms of qusitionList">
-              <i class="fa fa-search" aria-hidden="true"></i>
-              <span>{{itms.questionContent}}</span>
-              <p>
-                <span  class="a">A</span>
-                <span>{{itms.answerContent}}</span>
-              </p>
+          <div class="col-lg-6 col-md-6">
+            <div class="bottom2">
+              <div #text1 class="table1" (click)="clickNews($event,text2)">公司新闻</div>
+              <div #text2 class="table2" (click)="clickQuestion($event,text1)">资讯讨论</div>
+              <div class="new-box" *ngIf="flag">
+                <div class="newss" *ngFor="let item of newsList">
+                  <div class="bottom-news">
+                    <div class="l">
+                      <span>发布时间</span>
+                      <span>{{item.publishDate | date: 'yyyy-MM-dd' }}</span>
+                    </div>
+                    <div class="r">
+                      <h4>{{item.newsTitle}}</h4>
+                      <p style="margin-top: 10px">{{item.newsSummary}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-question" *ngIf="!flag" >
+                <div class="questions1" *ngFor="let itms of qusitionList">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  <span>{{itms.questionContent}}</span>
+                  <p>
+                    <span  class="a">A</span>
+                    <span>{{itms.answerContent}}</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

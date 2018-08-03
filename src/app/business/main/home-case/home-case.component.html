@@ -1,20 +1,24 @@
 <div class="case" [ngStyle]="{'height': h + 'px'}" style="padding-top: 80px">
-  <div class="case-top" >
-    <h1 class="h1">CASE INTRODUCTION</h1>
-    <div class="line">
-      <div class="s-line"></div>
+  <div class="content">
+    <div class="case-top">
+      <h1 class="h1">CASE INTRODUCTION</h1>
+      <div class="line">
+        <div class="s-line"></div>
+      </div>
+      <p>案例介绍</p>
     </div>
-    <p>案例介绍</p>
-  </div>
-  <div class="container">
-    <div class="row" style="padding: 55px">
-      <div class="col-lg-4 col-md-4" *ngFor="let item of caseList">
-        <div class="center1" >
-          <div class="sqr" [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}"></div>
-          <div class="name">
-            <h2>{{item.caseName}}</h2>
-            <p>{{item.caseSummary}}</p>
-            <button>查看详情</button>
+    <div class="case-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4" *ngFor="let item of caseList">
+            <div class="center1" >
+              <div class="sqr" [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}"></div>
+              <div class="name">
+                <h2>{{item.caseName}}</h2>
+                <button>{{item.caseSummary}}</button>
+                <!--<button>查看详情</button>-->
+              </div>
+            </div>
           </div>
         </div>
       </div>
