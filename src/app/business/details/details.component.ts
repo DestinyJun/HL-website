@@ -42,11 +42,7 @@ export class DetailsComponent implements OnInit {
       this.logins.getOnlyNew({id: this.id}).subscribe(
         (val) => {
           this.a = val;
-          this.logins.addNewsCount({id: this.id}).subscribe(
-            (value) => {
-              console.log(1121);
-            }
-          );
+          this.logins.addNewsCount({id: this.id});
           // this.readCount = val.readCount;
           // this.readCount = this.readCount + 1;
           // this.readCount++;
