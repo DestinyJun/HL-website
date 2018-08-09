@@ -18,7 +18,6 @@ export class HomeAboutusComponent implements OnInit, OnChanges {
   ) { }
 
   ngOnInit() {
-    console.log(this.aboutShow);
     this.logins.getAbouts({start: 0, length: 1}).subscribe(
       (value) => {
           this.companyTro = value.data[0].companySummarize;

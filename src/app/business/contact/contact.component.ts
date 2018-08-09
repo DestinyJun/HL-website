@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../common/services/login.service';
+import {HeaderService} from '../../common/services/header.service';
 declare let BMap;
 @Component({
   selector: 'app-contact',
@@ -10,10 +11,13 @@ export class ContactComponent implements OnInit {
   public picture: string;
   public companyInFormation: any;
   constructor(
-    public logins: LoginService
-  ) { }
+    public logins: LoginService, private header: HeaderService
+  ) {
+
+  }
 
   ngOnInit() {
+    this.header.name.next('联系我们');
     this.contactMap();
     this.logins.getAbouts({start: 0, length: 1}).subscribe(
       (value) => {
@@ -32,7 +36,6 @@ export class ContactComponent implements OnInit {
             }
           }
         );
-        console.log(a[0].pageUrl);
         this.picture = a[0].pageUrl;
       });
   }

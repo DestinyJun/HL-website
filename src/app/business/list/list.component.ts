@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../common/services/login.service';
+import {HeaderService} from '../../common/services/header.service';
 
 @Component({
   selector: 'app-list',
@@ -12,10 +13,11 @@ export class ListComponent implements OnInit {
   public startNumber = 0;
   public sum: number;
   constructor(
-    private logins: LoginService
+    private logins: LoginService, private header: HeaderService
   ) { }
 
   ngOnInit() {
+    this.header.name.next('新闻中心');
     this.logins.getBanner({start: 0, length: 5}).subscribe(
       value => {
         let a: any;
@@ -32,11 +34,9 @@ export class ListComponent implements OnInit {
       });
     this.logins.getNews({start: this.startNumber, length: 3}).subscribe(
       (value) => {
-        // console.log(value);
         this.newsList = [];
         this.newsList = value.data.news;
         this.sum = Math.ceil(value.data.sumCounts / 3);
-        // console.log(this.sum);
       });
   }
 
@@ -46,7 +46,6 @@ export class ListComponent implements OnInit {
       (value) => {
         this.newsList = [];
         this.newsList = value.data.news;
-        // console.log( this.newsList);
       });
   }
 

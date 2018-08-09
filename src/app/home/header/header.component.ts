@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {LoginService} from '../../common/services/login.service';
+import {HeaderService} from '../../common/services/header.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import {LoginService} from '../../common/services/login.service';
 })
 export class HeaderComponent implements OnInit {
   public test: any;
-  public name: string;
+  name = '首页';
   public navList = [
     {name: '首页', url: '/home'},
     {name: '关于我们', url: '/home/about'},
@@ -19,24 +20,18 @@ export class HeaderComponent implements OnInit {
   ];
   public  routerList = ['/home', '/home/about', '/home/list', '/home/list', '/home/about'];
   constructor(
-    private http: HttpClient,
-    private logins: LoginService
-  ) { }
+    private http: HttpClient, private logins: LoginService,
+    private header: HeaderService
+  ) {
+    this.header.name.subscribe(
+      (name) => {
+      this.name = name;
+    });
+  }
 
   ngOnInit() {
-    // 头部导航数据
-   /*this.logins.getNavs().subscribe(
-      (value) => {
-        this.test = value;
-        this.test.values[0].map((val, index) => {
-          this.navList.push({name: val, url: this.routerList[index]});
-        });
-        // this.navList = this.test.values[0];
-        console.log(this.navList);
-      }
-    );*/
   }
-  putName(name) {
+  pullName(name) {
     this.name = name;
   }
 }

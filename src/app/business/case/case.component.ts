@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../common/services/login.service';
+import {HeaderService} from '../../common/services/header.service';
 
 @Component({
   selector: 'app-case',
@@ -13,10 +14,11 @@ export class CaseComponent implements OnInit {
   public sum: number;
   public a = [];
   constructor(
-    private logins: LoginService
+    private logins: LoginService, private header: HeaderService
   ) { this.caseList = []; }
 
   ngOnInit() {
+    this.header.name.next('案列介绍');
     this.logins.getBanner({start: 0, length: 5}).subscribe(
       value => {
         let a: any;
@@ -34,11 +36,8 @@ export class CaseComponent implements OnInit {
     this.logins.getCase({start: this.startNumber, length: 6}).subscribe(
       value => {
      this.caseList = [];
-     console.log(value);
      this.sum = Math.ceil(value.iTotalRecords / 6);
         let k = [];
-        // this.caseList = value.data;
-        console.log(value['data'].length);
         for (let i = 0; i < value['data'].length; i++) {
           if ( i % 3 !== 0 || i === 0) {
             k.push(value['data'][i]);
@@ -51,7 +50,6 @@ export class CaseComponent implements OnInit {
         if (k.length > 0) {
           this.caseList.push(k);
         }
-        console.log(this.caseList );
       });
     }
   public followPageAccept(e) {
@@ -60,7 +58,6 @@ export class CaseComponent implements OnInit {
       value => {
         this.caseList = [];
         let k = [];
-        // this.caseList = value.data;
         for (let i = 0; i < value['data'].length; i++) {
           if ( i % 3 !== 0 || i === 0) {
             k.push(value['data'][i]);

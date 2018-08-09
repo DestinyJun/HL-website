@@ -1,6 +1,5 @@
 .classify {
   text-align: center;
-  /*margin: 0 auto;*/
 }
 .classify ul {
   list-style: none;
@@ -19,13 +18,13 @@
   margin-bottom: 10px;
 }
 .classify li:hover {
-  background:#21A0DE;
+  background: rgb(230,0,0);
   cursor: pointer;
   color: white;
   font-size: 18px;
 }
 .active{
-  background:#21A0DE;
+  background:rgb(230,0,0);
   color: white;
 }
 .unactive{
@@ -44,7 +43,7 @@
   margin: 0;
   width: 230px;
   padding-bottom: 5px;
-  border-bottom: 3px solid rgba(33,160,222,0.5);
+  border-bottom: 3px solid rgba(230,0,0,0.8);
   margin-bottom: 15px;
 }
 .word .person p {

@@ -27,7 +27,7 @@
               <div #text1 class="table1" (click)="clickNews($event,text2)">公司新闻</div>
               <div #text2 class="table2" (click)="clickQuestion($event,text1)">资讯讨论</div>
               <div class="new-box" *ngIf="flag">
-                <div class="newss" *ngFor="let item of newsList">
+                <div class="newss" *ngFor="let item of newsList" [routerLink]="['/home/details']" [queryParams]="{id:item.id,name:'新闻中心'}">
                   <div class="bottom-news">
                     <div class="l">
                       <span>发布时间</span>

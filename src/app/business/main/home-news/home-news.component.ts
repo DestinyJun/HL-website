@@ -32,7 +32,6 @@ export class HomeNewsComponent implements OnInit {
     this.logins.getRefer({start: 0, length: 3}).subscribe(
       (e) => {
         this.qusitionList = e.data;
-        console.log(this.qusitionList);
       }
     );
   }

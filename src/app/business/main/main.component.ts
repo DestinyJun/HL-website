@@ -44,7 +44,6 @@ export class MainComponent implements OnInit {
           }
         }
       }
-      console.log(this.h);
 
       if (this.divhei === 0) {
         this.carouselShow = true;

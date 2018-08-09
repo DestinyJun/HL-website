@@ -19,6 +19,7 @@ import {HomeContactComponent} from './components/home-contact/home-contact.compo
 import { BannerComponent } from './components/banner/banner.component';
 import { RightNavComponent } from './components/right-nav/right-nav.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import {HeaderService} from './services/header.service';
 
 
 @NgModule({

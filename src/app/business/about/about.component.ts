@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../common/services/login.service';
+import {HeaderService} from '../../common/services/header.service';
 // import {start} from 'repl';
 
 @Component({
@@ -16,7 +17,7 @@ export class AboutComponent implements OnInit {
   public aboutCase: any;
   public programme: Array<Programme>;
   constructor(
-    private logins: LoginService
+    private logins: LoginService, private header: HeaderService
   ) {
     this.programme = [];
   }
@@ -25,23 +26,21 @@ export class AboutComponent implements OnInit {
     this.bool = title;
   }
   ngOnInit() {
+    this.header.name.next('关于我们');
     this.title = ['公司基本情况', '主要人员', '主要设计实施的项目', '未来规划'];
     this.bool = '公司基本情况';
     this.logins.getAbouts({start: 0, length: 1}).subscribe(
       (value) => {
-        // console.log(value);
       }
     );
     this.logins.getPersons({start: 0, length: 2}).subscribe(
       (value) => {
         this.person = value.data;
-        console.log(this.person);
       }
     );
     // 主要设计实施的项目
     this.logins.getProject({start: 0, length: 3}).subscribe(
       (value) => {
-        // console.log(value);
         this.project = value.data;
       }
     );
@@ -49,8 +48,6 @@ export class AboutComponent implements OnInit {
     this.logins.getProgramme({start: 0, length: 1}).subscribe(
       (value) => {
         this.programme = value['data'];
-        // console.log(this.programme[0].companyAddress);
-        // this.programme = value.data;
       }
     );
     this.logins.getBanner({start: 0, length: 5}).subscribe(
@@ -65,7 +62,6 @@ export class AboutComponent implements OnInit {
                }
           }
         );
-        console.log(a[0].pageUrl);
         this.picture = a[0].pageUrl;
       });
 

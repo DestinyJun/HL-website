@@ -1,5 +1,5 @@
 .about {
-  background-image: url("http://120.78.138.104/images/HL-website/about.jpg");
+  background-image: url("http://120.78.138.104/images/HL-website/关于我们.jpg");
   display: flex;
   flex-wrap:wrap;
   justify-content:center;
@@ -7,31 +7,35 @@
   transition: opacity 2s;
 }
 .total {
-  width: 100%;
+  width: 80%;
 }
 .about-top {
   text-align: center;
-  color: black;
   width: 100%;
+  color: white;
 }
 .about-top h1 {
-  font-size: 44px;
   margin:0;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  font-size: 60px;
 }
 .about-top p {
   margin: 0;
   padding-top: 20px;
+  font-size: 24px;
+
 }
 .about-top .line {
-  height: 3px;
+  height: 8px;
   background-color: white;
+  background: radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0.1),rgba(255,255,255,0)); /* 标准的语法 */
 }
 .about .s-line {
   width: 135px;
-  height: 4px;
-  background-color: #03a9f4;
+  height: 6px;
+  background-color: rgb(230,0,0);
   margin: 0 auto;
 }
 .about-bottom {
