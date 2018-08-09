@@ -13,6 +13,7 @@ export class DetailsComponent implements OnInit {
   public id: number;
   public name: string;
   public a: any;
+  // public readCount: number;
   constructor(
     private logins: LoginService,
     private routerInfo: ActivatedRoute,
@@ -41,12 +42,21 @@ export class DetailsComponent implements OnInit {
       this.logins.getOnlyNew({id: this.id}).subscribe(
         (val) => {
           this.a = val;
+          this.logins.addNewsCount({id: this.id}).subscribe(
+            (value) => {
+              console.log(1121);
+            }
+          );
+          // this.readCount = val.readCount;
+          // this.readCount = this.readCount + 1;
+          // this.readCount++;
         }
       );
     } else if (this.name === '案例介绍') {
       this.logins.getCases({id: this.id}).subscribe(
         (val) => {
           this.a = val;
+          console.log(val);
         }
       );
     }

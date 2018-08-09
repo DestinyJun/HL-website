@@ -61,4 +61,9 @@ export class LoginService {
   public getBanner(params): Observable<any> {
     return this.http.get('http://120.78.137.182:8808/red-bird/subpage/queryByPaging', {params});
   }
+  //  增加新闻阅读量
+  public addNewsCount(params) {
+    console.log(params);
+    this.http.get('http://120.78.137.182:8808/red-bird/news/readCount', {params}).subscribe();
+  }
 }

@@ -7,7 +7,7 @@
         <div *ngIf="this.name === '新闻中心'">
           <h1 class="text-center">{{a?.newsTitle}}</h1>
           <p style="color: #4D4D4D;" class="text-center">
-            <span>红鸟智能</span><span style="margin-left: 15px">{{a.publishDate | date:'yyyy-MM-dd'}}</span>
+            <span>红鸟智能</span><span style="margin-left: 15px">{{a?.publishDate | date:'yyyy-MM-dd'}}</span><span style="margin-left: 15px">阅读量：{{a?.readCount}}</span>
           </p>
           <div [innerHTML]="a?.newsContent"></div>
         </div>
