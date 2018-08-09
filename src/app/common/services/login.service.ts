@@ -61,4 +61,9 @@ export class LoginService {
   public getBanner(params): Observable<any> {
     return this.http.get('http://120.78.137.182:8808/red-bird/subpage/queryByPaging', {params});
   }
+
+  // 新闻关键字搜索
+  public getNewsSearch(params): Observable<any> {
+    return this.http.get('http://120.78.137.182:8808/red-bird/news/seach-news', {params});
+  }
 }

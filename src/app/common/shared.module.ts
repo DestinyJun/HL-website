@@ -20,6 +20,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { RightNavComponent } from './components/right-nav/right-nav.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import {HeaderService} from './services/header.service';
+import { PipesPipe } from './pipes/pipes.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import {HeaderService} from './services/header.service';
     HomeContactComponent,
     BannerComponent,
     RightNavComponent,
-    PaginationComponent
+    PaginationComponent,
+    PipesPipe
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,6 @@ import {HeaderService} from './services/header.service';
     ReactiveFormsModule,
     TreeModule,
     CarouselModule.forRoot()
-
   ],
   exports: [
     HttpClientModule,

@@ -11,6 +11,9 @@ export class ListComponent implements OnInit {
   public picture: string;
   public newsList: any;
   public startNumber = 0;
+  public paginationShow = true;
+  public newsShow = false;
+  public keyWord: string;
   public sum: number;
   constructor(
     private logins: LoginService, private header: HeaderService
@@ -39,7 +42,18 @@ export class ListComponent implements OnInit {
         this.sum = Math.ceil(value.data.sumCounts / 3);
       });
   }
-
+  public eventBtnClick(e): void {
+    this.logins.getNewsSearch({question: e}).subscribe(
+      (value) => {
+        this.paginationShow = false;
+        this.newsList = [];
+        this.newsList = value.data;
+        if (!(value.data)) {
+          this.newsShow = true;
+        }
+      }
+    );
+  }
   public followPageAccept(e) {
     this.startNumber = (e - 1) * 3;
     this.logins.getNews({start: this.startNumber, length: 3}).subscribe(
