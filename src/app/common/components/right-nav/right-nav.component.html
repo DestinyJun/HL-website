@@ -1,10 +1,10 @@
 <div class="main-right">
-  <form class="form-inline">
-    <div class="form-group">
-      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="请输入...">
-    </div>
-    <button type="submit" class="btn btn-default" style="color: #999999">搜索</button>
-  </form>
+  <!--<form class="form-inline">-->
+    <!--<div class="form-group">-->
+      <!--<input type="email" [formControl]="titleFilter" class="form-control" id="exampleInputEmail2" placeholder="请输入...">-->
+    <!--</div>-->
+    <!--<button type="submit" class="btn btn-default" style="color: #999999" (click)="onClick()">搜索</button>-->
+  <!--</form>-->
   <div class="subject">
     <h4>所有专题</h4>
     <ul>
@@ -16,9 +16,9 @@
   <div class="recommend">
     <h4>为你推荐</h4>
     <ul>
-      <li>谷雨 | 作家龙应台与母亲首支纪录片：落泪注视 生命从不等候</li>
-      <li>太原最牛“钉子户”被绿色环绕 如同绿洲中的“孤岛”</li>
-      <li>太原最牛“钉子户”被绿色环绕 如同绿洲中的“孤岛”</li>
+      <li *ngFor="let item of newsList">
+        {{item?.newsTitle}}
+      </li>
     </ul>
   </div>
 </div>

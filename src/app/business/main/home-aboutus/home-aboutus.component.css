@@ -44,7 +44,7 @@
 .about-bottom .centerl {
   height: 250px;
   background-color: gray;
-  background-image: url("http://120.78.138.104/images/HL-website/bg1.jpg");
+  background-image: url("http://120.78.138.104/images/HL-website/图层1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -82,6 +82,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-image: url("http://120.78.138.104/images/HL-website/bg2.jpg");
+  background-image: url("http://120.78.138.104/images/HL-website/图层2.png");
   border: 5px solid white;
 }
