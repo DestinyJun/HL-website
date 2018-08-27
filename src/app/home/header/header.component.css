@@ -43,3 +43,8 @@
   color: #515151;
   background-color: transparent;
 }
+@media (max-width: 993px) {
+  .header {
+    display: none;
+  }
+}

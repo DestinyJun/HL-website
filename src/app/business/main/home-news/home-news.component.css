@@ -177,3 +177,44 @@
   background-color: white;
   height:75px;
 }
+@media  (max-width: 993px){
+  .news-top h1 {
+    font-size: 3.5rem;
+    padding: 10px 0;
+  }
+  .news-top p {
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
+  .news .line {
+    height: 5px;
+  }
+  .news .s-line {
+    width: 6.5rem;
+    height: 4px;
+  }
+  .news-bottom {
+    margin-top: 20 px;
+  }
+  .bottom2 {
+    padding-top: 50px;
+  }
+  .bottom-news .l {
+    width: 28%;
+    font-size: 0.5rem;
+  }
+  .bottom2 .table1 {
+    top: 18px;
+    left: 67px;
+    width: 5.5rem;
+    height: 2.5rem;
+    font-size: 0.5rem;
+  }
+  .bottom2 .table2 {
+    top: 18px;
+    left: 135px;
+    width: 5.5rem;
+    height: 2.5rem;
+    font-size: 0.5rem;
+  }
+}
