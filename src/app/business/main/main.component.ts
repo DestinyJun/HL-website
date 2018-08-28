@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
       this.carouselShow = true;
     }
     window.addEventListener('wheel', (e) => {
-      if (this.wheelState) {
+     /* if (this.wheelState) {
         if (this.timer) {
           clearTimeout(this.timer);
         }
@@ -54,8 +54,39 @@ export class MainComponent implements OnInit {
         this.newsShow = true;
       } else if (this.divhei === this.h * 3) {
         this.caseShow = true;
-      }
+      }*/
+     this.scrollEvent(e);
     });
+  }
+  public scrollEvent(e): void {
+    if (this.wheelState) {
+      if (this.timer) {
+        clearTimeout(this.timer);
+      }
+      this.wheelState = false;
+      this.timer = setTimeout(() => {
+        this.wheelState = true;
+      }, 1000);
+      if (e.deltaY > 0) {
+        if (!(this.divhei === -(this.h * 3))) {
+          this.divhei = this.divhei + (-this.h);
+        }
+      } else if (e.deltaY < 0) {
+        if (!(this.divhei === 0)) {
+          this.divhei = this.divhei + this.h;
+        }
+      }
+    }
 
+    if (this.divhei === 0) {
+      this.carouselShow = true;
+    } else if (this.divhei === -this.h) {
+      this.aboutShow = true;
+      console.log(this.aboutShow);
+    } else if (this.divhei === this.h * 2) {
+      this.newsShow = true;
+    } else if (this.divhei === this.h * 3) {
+      this.caseShow = true;
+    }
   }
 }
