@@ -33,10 +33,14 @@
 .picturelist ul li {
   float: left;
   margin-right: 15px;
-  /*background: #D3DBDB;*/
 }
 .list-group .list-group-item {
   border: none;
+}
+@media (max-width: 993px) {
+  .search {
+    display: none;
+  }
 }
 
 

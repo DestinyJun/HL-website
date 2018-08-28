@@ -1,7 +1,7 @@
 <app-banner [imageUrl]="picture"></app-banner>
 <div class="details">
   <div class="container">
-    <div class="row" style="padding-top: 60px">
+    <div class="row content">
       <div class="col-lg-8 col-md-8">
         <div *ngIf="this.name === '新闻中心'">
           <h1 class="text-center">{{a?.newsTitle}}</h1>
@@ -20,7 +20,7 @@
         </div>
 
       </div>
-      <div class="col-lg-4 col-md-4">
+      <div class="col-lg-4 col-md-4 right-nav">
         <app-right-nav></app-right-nav>
       </div>
     </div>

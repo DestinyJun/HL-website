@@ -8,10 +8,10 @@
             <h3>很抱歉，你输入的关键字没有检索到数据</h3>
           </div>
           <div class="row" style="margin-bottom: 15px" *ngFor="let i of newsList">
-            <div class="col-lg-5 col-md-5">
+            <div class="col-lg-5 col-md-5 col-xs-4">
               <div class="picture" [ngStyle]="{'background-image':'url('+i.imgUrl+')'}"></div>
             </div>
-            <div class="col-lg-7 col-md-7">
+            <div class="col-lg-7 col-md-7 col-xs-8">
               <div class="content">
                 <h3 [routerLink]="['/home/details']" [queryParams]="{id:i.id,name:'新闻中心'}">{{i.newsTitle }}</h3>
                 <p>{{i.newsSummary}}</p>
@@ -23,7 +23,8 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <!--分页-->
+          <div class="row" style="margin-bottom: 60px;">
             <div class="col-lg-12 col-md-12">
               <div class="page-list">
                 <app-pagination (followPage)="followPageAccept($event)" [totalPage]="sum" *ngIf="paginationShow"></app-pagination>
@@ -32,13 +33,18 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4">
-        <form class="form-inline">
-          <div class="form-group">
-            <input type="email" [formControl]="titleFilter" class="form-control" id="exampleInputEmail2" placeholder="请输入...">
+      <div class="col-lg-4 col-md-4 list-left">
+        <!--搜索框-->
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-xs-12">
+            <form class="form-inline">
+              <div class="form-group">
+                <input type="email" [formControl]="titleFilter" class="form-control" id="exampleInputEmail2" placeholder="请输入...">
+              </div>
+              <button type="submit" class="btn btn-default" style="color: #999999" (click)="onClick()">搜索</button>
+            </form>
           </div>
-            <button type="submit" class="btn btn-default" style="color: #999999" (click)="onClick()">搜索</button>
-        </form>
+        </div>
         <app-right-nav></app-right-nav>
       </div>
     </div>

@@ -1,0 +1,14 @@
+.content {
+  padding-top: 60px;
+}
+@media (max-width: 993px) {
+  .content {
+    padding-top: 20px;
+  }
+  .details h1 {
+    font-size: 3.5rem;
+  }
+  .right-nav {
+    display: none;
+  }
+}

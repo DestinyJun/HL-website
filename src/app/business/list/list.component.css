@@ -7,7 +7,6 @@
 }
 
 .main-left .picture {
-  /*background: #000;*/
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
@@ -15,6 +14,7 @@
 
 }
 .main-left .content {
+  height: 200px;
 }
 .main-left .content h3{
   margin: 0;
@@ -39,5 +39,10 @@
 .main-right .subject {
 
 }
+@media (max-width: 993px) {
+  .list-left {
+    display: none;
+}
 
+}
 
