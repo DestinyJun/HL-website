@@ -49,7 +49,6 @@ export class MainComponent implements OnInit {
         this.carouselShow = true;
       } else if (this.divhei === -this.h) {
         this.aboutShow = true;
-        console.log(this.aboutShow);
       } else if (this.divhei === this.h * 2) {
         this.newsShow = true;
       } else if (this.divhei === this.h * 3) {
