@@ -34,7 +34,7 @@ export class CaseComponent implements OnInit {
           console.log(value);
         }
       );
-    this.header.name.next('案列介绍');
+    this.header.name.next('案例介绍');
     this.logins.getBanner({start: 0, length: 5}).subscribe(
       value => {
         let a: any;

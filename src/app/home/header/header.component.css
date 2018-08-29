@@ -14,10 +14,21 @@
   top:8.5px;
   left: 0;
 }
-.name{
+.navbar-brand .name{
+  float:left;
+}
+.navbar-brand .name>p{
+  margin: 0;
+  padding-top: 15px;
+  font-size: 20px;
+  color: black;
+  vertical-align: center;
+}
+/*.name{
+  display: inline-block;
   padding-left: 100px;
   padding-top: 17px;
-}
+}*/
 
 .navlist ul{
   padding-left: 0;
@@ -43,8 +54,38 @@
   color: #515151;
   background-color: transparent;
 }
+@media (max-width: 1290px) {
+  .header {
+    padding-left: 0;
+  }
+  .name{
+    display: none;
+  }
+}
 @media (max-width: 993px) {
   .header {
     display: none;
   }
+}
+
+/*bootstrap改造*/
+.navbar-brand {
+  padding: 15px 0 0 0;
+  vertical-align: center;
+}
+@media (min-width: 768px){
+  .navbar-nav {
+    float: right;
+    margin: 0;
+  }
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  background: rgb(230,0,0);
+  color: white;
+}
+.navbar {
+  min-height: 80px;
+}
+.navbar-nav > li > a {
+  line-height: 50px;
 }

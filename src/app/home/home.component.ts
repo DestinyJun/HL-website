@@ -2,7 +2,6 @@ import {
   Component,
   OnInit
 } from '@angular/core';
-import {HeaderService} from '../common/services/header.service';
 
 @Component({
   selector: 'app-home',

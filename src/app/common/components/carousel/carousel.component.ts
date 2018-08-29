@@ -21,6 +21,7 @@ export class CarouselComponent implements OnInit {
     }
     this.logins.getPhoto({start: 0, length: 3}).subscribe(
       (e) => {
+        console.log(e.data);
         this.photoList = e.data;
       }
     );

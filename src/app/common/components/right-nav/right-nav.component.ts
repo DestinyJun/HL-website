@@ -19,7 +19,6 @@ export class RightNavComponent implements OnInit {
   ngOnInit() {
     this.logins.getNewsRecommend().subscribe(
       (val) => {
-        console.log(val);
         this.newsList = val;
       }
     );

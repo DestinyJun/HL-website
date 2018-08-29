@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   public test: any;
   name = '首页';
   public navList = [
-    {name: '首页', url: '/home'},
+    {name: '网站首页', url: '/home'},
     {name: '关于我们', url: '/home/about'},
     {name: '新闻中心', url: '/home/list'},
     {name: '案例介绍', url: '/home/case'},
@@ -26,12 +26,13 @@ export class HeaderComponent implements OnInit {
     this.header.name.subscribe(
       (name) => {
       this.name = name;
+      console.log(name);
     });
   }
 
   ngOnInit() {
   }
-  pullName(name) {
+  public pullName(name): void {
     this.name = name;
   }
 }
