@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {LoginService} from '../../common/services/login.service';
 import {HeaderService} from '../../common/services/header.service';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -8,18 +9,29 @@ import {HeaderService} from '../../common/services/header.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  // 表单
+  public titleFilter: FormControl = new FormControl();
+  public keyWord: string;
   public picture: string;
   public newsList: any;
   public startNumber = 0;
   public paginationShow = true;
   public newsShow = false;
-  public keyWord: string;
   public sum: number;
   constructor(
     private logins: LoginService, private header: HeaderService
   ) { }
 
   ngOnInit() {
+    // 搜索
+    this.titleFilter.valueChanges
+      .debounceTime(10)
+      .subscribe(
+        (value) => {
+          this.keyWord = value;
+          console.log(value);
+        }
+      );
     this.header.name.next('新闻中心');
     this.logins.getBanner({start: 0, length: 5}).subscribe(
       value => {
@@ -42,14 +54,17 @@ export class ListComponent implements OnInit {
         this.sum = Math.ceil(value.data.sumCounts / 3);
       });
   }
-  public eventBtnClick(e): void {
-    this.logins.getNewsSearch({question: e}).subscribe(
+  public onClick(): void {
+    this.logins.getNewsSearch({question: this.keyWord}).subscribe(
       (value) => {
         this.paginationShow = false;
         this.newsList = [];
         this.newsList = value.data;
-        if (!(value.data)) {
+        console.log(value.data === null);
+        if (value.data === null) {
           this.newsShow = true;
+        } else {
+          this.newsShow = false;
         }
       }
     );

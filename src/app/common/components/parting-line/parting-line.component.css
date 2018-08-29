@@ -16,3 +16,11 @@
   margin-right: 20px;
   color: white;
 }
+@media (max-width: 993px) {
+  .message span:nth-child(3){
+    display: block;
+  }
+  .message {
+    height: 60px;
+  }
+}

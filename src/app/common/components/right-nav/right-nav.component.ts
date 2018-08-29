@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl} from '@angular/forms';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-right-nav',
@@ -7,26 +8,24 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./right-nav.component.css']
 })
 export class RightNavComponent implements OnInit {
-  // 表单
-  public titleFilter: FormControl = new FormControl();
-  public keyWord: string;
-  // 保存关键字
+  public newsList: any;
+  /*// 保存关键字
   @Output() public question =  new EventEmitter<string>();
-  @Output() public eventBtn =  new EventEmitter<any>();
-  constructor() {}
+  @Output() public eventBtn =  new EventEmitter<any>();*/
+  constructor(
+    private logins: LoginService
+  ) {}
 
   ngOnInit() {
-    this.titleFilter.valueChanges
-      .debounceTime(10)
-      .subscribe(
-        (value) => {
-          this.question.emit(value);
-          this.keyWord = value;
-        }
-      );
+    this.logins.getNewsRecommend().subscribe(
+      (val) => {
+        console.log(val);
+        this.newsList = val;
+      }
+    );
   }
-  public onClick(): void {
+ /* public onClick(): void {
     this.eventBtn.emit(this.keyWord);
-  }
+  }*/
 
 }

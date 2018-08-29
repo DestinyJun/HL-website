@@ -2,7 +2,7 @@
   margin-right: 10px;
 }
 .pagination > li > a, .pagination > li > span {
-  padding: 6px 12px;
+  padding: 6px 6px;
   margin-left: -1px;
   color: #000;
   background-color: #fff;
@@ -10,4 +10,13 @@
 }
 .pagination > li > a, .pagination > li:hover {
   cursor: pointer;
+}
+@media (max-width: 993px) {
+  .pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .pagination > li > a, .pagination > li{
+    margin-right: 0;
+  }
 }
