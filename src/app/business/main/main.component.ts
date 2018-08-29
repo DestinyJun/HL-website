@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainComponent implements OnInit {
   public h: number;
+  public w: number;
   public divhei = 0;
   public wheelState = true;
   public timer: any;
@@ -33,10 +34,20 @@ export class MainComponent implements OnInit {
     document.querySelector('.main').addEventListener('touchend', (e) => {
       this.touchType = e.type;
     });
-
-    this.h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    // this.h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    this.w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (this.w < 993) {
+      this.h = window.innerHeight - 50 || document.documentElement.clientHeight - 50 || document.body.clientHeight - 50;
+    } else {
+      this.h = window.innerHeight - 80 || document.documentElement.clientHeight - 80 || document.body.clientHeight - 80;
+    }
     window.addEventListener('resize', (e) => {
-      this.h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      this.w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if (this.w < 993) {
+        this.h = window.innerHeight - 50 || document.documentElement.clientHeight - 50 || document.body.clientHeight - 50;
+      } else {
+        this.h = window.innerHeight - 80 || document.documentElement.clientHeight - 80 || document.body.clientHeight - 80;
+      }
     });
     if (this.divhei === 0) {
       this.carouselShow = true;
@@ -65,7 +76,7 @@ export class MainComponent implements OnInit {
       }
     }
 
-    if (this.divhei === 0) {
+   /* if (this.divhei === 0) {
       this.carouselShow = true;
     } else if (this.divhei === -this.h) {
       this.aboutShow = true;
@@ -74,7 +85,7 @@ export class MainComponent implements OnInit {
       this.newsShow = true;
     } else if (this.divhei === this.h * 3) {
       this.caseShow = true;
-    }
+    }*/
   }
   public touchScrollEvent(e): void {
     if (this.wheelState && this.touchType === 'touchend') {

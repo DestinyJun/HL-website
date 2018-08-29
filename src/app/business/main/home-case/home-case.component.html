@@ -10,7 +10,7 @@
     <div class="case-bottom">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-4" *ngFor="let item of caseList" [routerLink]="['/home/details']" [queryParams]="{id:item.id,name:'案例介绍'}">
+          <div class="col-lg-4 col-md-4" style="margin-bottom: 15px" *ngFor="let item of caseList" [routerLink]="['/home/details']" [queryParams]="{id:item.id,name:'案例介绍'}">
             <div class="center1" >
               <div class="sqr" [ngStyle]="{'background-image': 'url('+item.imgUrl+')'}"></div>
               <div class="name">

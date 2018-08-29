@@ -3,8 +3,6 @@
   display: flex;
   flex-wrap:wrap;
   justify-content:center;
-  align-items:center;
-  padding-top: 80px;
 }
 .content {
   width: 80%;
@@ -15,14 +13,11 @@
   width: 100%;
 }
 .case-top h1 {
-  font-size: 60px;
-  margin:0;
-  padding: 30px 0;
+  font-size: 20px;
 }
 .case-top p {
-  margin: 0;
   padding-top: 20px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .case-top .line {
   height: 8px;
@@ -97,26 +92,13 @@ button {
   text-overflow:ellipsis;
 }
 @media  (max-width: 993px) {
-  .case {
-    overflow: scroll;
-
+ .center1{
+   height: 100px;
+ }
+  .center1 .sqr{
+    height: 50px;
   }
-  .case-top h1 {
-    font-size: 3.5rem;
-    padding: 10px 0;
-  }
-
-  .case-top p {
-    font-size: 1.5rem;
-    padding-top: 10px;
-  }
-
-  .case-top .line {
-    height: 5px;
-  }
-
-  .case-top .s-line {
-    width: 6.5rem;
-    height: 4px;
+  .center1 .name button{
+    display: none;
   }
 }

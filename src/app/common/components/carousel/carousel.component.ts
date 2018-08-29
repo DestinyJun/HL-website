@@ -16,6 +16,7 @@ export class CarouselComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(this.h);
     if (this.carouselShow) {
       this.opacityCarousel = 1;
     }
