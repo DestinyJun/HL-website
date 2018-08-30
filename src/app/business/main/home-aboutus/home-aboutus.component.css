@@ -123,4 +123,7 @@
   .about-bottom .centerr{
     display: none;
   }
+  .about-content-list{
+    display: block;
+  }
 }

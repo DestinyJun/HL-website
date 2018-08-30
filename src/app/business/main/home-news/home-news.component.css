@@ -220,4 +220,7 @@
   .bottom-question {
     background:white;
   }
+  .news-bottom{
+    display: block;
+  }
 }
