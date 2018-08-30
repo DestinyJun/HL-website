@@ -13,7 +13,7 @@
   width: 100%;
 }
 .case-top h1 {
-  font-size: 20px;
+  font-size: 40px;
 }
 .case-top p {
   padding-top: 20px;
@@ -32,6 +32,7 @@
 }
 .case-bottom {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 .center {
   height: 320px;
@@ -39,7 +40,7 @@
 }
 .center1 {
   height: 250px;
-  padding: 6px;
+  padding: 4px;
   background: white;
   text-align: center;
 }
@@ -67,16 +68,16 @@
 .center1 .name h2 {
   width:200px;
   padding:0;
-  margin:8px auto 8px auto;
+  font-size: 18px;
+  color: black;
+  letter-spacing:5px;
+  margin:8px 0 8px 0;
   white-space:nowrap;
   overflow:hidden;
   text-overflow:ellipsis;
 }
 .case-bottom h2 {
-  font-size: 18px;
-  color: black;
-  letter-spacing:5px;
-  margin:0;
+
 }
 button {
   background: rgb(230,0,0);
@@ -92,11 +93,44 @@ button {
   text-overflow:ellipsis;
 }
 @media  (max-width: 993px) {
- .center1{
-   height: 100px;
- }
-  .center1 .sqr{
-    height: 50px;
+  .content {
+  }
+  .case-top h1 {
+    font-size: 26px;
+    margin-top: 40px;
+  }
+  .case-top p {
+    padding-top: 10px;
+    /*padding-bottom: 30px;*/
+    font-size: 16px;
+  }
+  .case-top .line{
+    height: 4px;
+  }
+  .case-top .s-line {
+    width: 75px;
+    height: 3px;
+  }
+  .center1 {
+    height: 115px;
+  }
+  .center1 .sqr {
+    height: 80px;
+  }
+  .center1 .name {
+    padding: 0;
+  }
+  .center1 .name h2 {
+    margin:8px 0 8px 0;
+    padding-bottom: 5px;
+    font-size: 0.5rem;
+  }
+  .center1 .name h2 {
+    letter-spacing: 0;
+    width:80px;
+    text-align: center;
+    text-overflow:ellipsis;
+
   }
   .center1 .name button{
     display: none;

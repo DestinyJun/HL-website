@@ -12,7 +12,7 @@
   color: white;
 }
 .news-top h1 {
-  font-size: 20px;
+  font-size: 40px;
 }
 .news-top p {
   padding-bottom: 20px;
@@ -25,7 +25,7 @@
   background: radial-gradient(rgba(255,255,255,1), rgba(255,255,255,0.1),rgba(255,255,255,0));
 }
 
-.news .s-line {
+.news-top .s-line {
   width: 135px;
   height: 6px;
   background-color: rgb(230,0,0);
@@ -96,9 +96,14 @@
   height: 71px;
   background: white;
   margin-bottom: 20px;
-  padding: 4px 0 4px 0;
+  padding-top:4px;
+  padding-bottom: 4px;
+  overflow: hidden;
 }
-.bottom-news {}
+.bottom2 .newss .bottom-news {
+  overflow: hidden;
+  height: 100%;
+}
 .bottom-news .l{
   float: left;
   height: 100%;
@@ -108,10 +113,12 @@
   padding-top: 17px;
   color: white;
 }
+.bottom-news .l span {
+  display: block;
+}
 .bottom-news .r {
   float: left;
   height: 100%;
-  /*width: 82%;*/
   text-align: left;
   color: black;
   padding:4px 0 0 15px;
@@ -135,6 +142,7 @@
 .bottom-question .questions1{
   background-color: white;
   height:71px;
+  padding-top: 5px;
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 
@@ -170,7 +178,24 @@
   background-color: white;
   height:75px;
 }
+/*媒体查询*/
 @media  (max-width: 993px){
+  .news-top h1 {
+    font-size: 26px;
+    margin-top: 40px;
+  }
+  .news-top p {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+  .news-top .line{
+    height: 4px;
+  }
+  .news-top .s-line {
+    width: 75px;
+    height: 3px;
+  }
   .bottom1{
     display: none;
   }
@@ -180,14 +205,16 @@
     justify-content: center;
   }
    .bottom2 .new-box{
-     width: 100vw;
+     /*width: 100vw;*/
      height: 100px;
      background: #000;
   }
-  .bottom-question{
-    width: 100vw;
-    height: 100px;
-    background: red;
-  }
+  .bottom-news .l {
+    width: 35%;
+    height: 100%;
 
+  }
+  .bottom-question {
+    background:white;
+  }
 }

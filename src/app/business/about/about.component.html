@@ -2,7 +2,7 @@
 <div class="aboutlist">
   <div class="container">
     <div class="row" style="padding: 30px 0 30px 0;">
-      <div class="col-lg-4 col-md-4" style="">
+      <div class="col-lg-4 col-md-4">
         <div class="classify">
           <ul>
             <li [ngClass]="{'active':i==bool, 'unactive': !(i==bool)}" *ngFor="let i of title" (click)="toggleTitle(i)">{{i}}</li>

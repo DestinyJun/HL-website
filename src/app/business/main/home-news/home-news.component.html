@@ -8,7 +8,7 @@
       <p class="text-center">新闻中心</p>
     </div>
     <div class="news-bottom">
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-6 col-md-6 col-xs-12">
         <div class="bottom1">
           <carousel>
             <slide *ngFor="let item of newsPhotoList">
@@ -20,7 +20,7 @@
           </carousel>
         </div>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-6 col-md-6 col-xs-12">
         <div class="bottom2">
           <div class="toggle-table">
             <div #text1 class="table1" (click)="clickNews($event,text2)">公司新闻</div>
@@ -41,14 +41,14 @@
             </div>
           </div>
           <div class="bottom-question" *ngIf="!flag" >
-           <!-- <div class="questions1" *ngFor="let itms of qusitionList">
+            <div class="questions1" *ngFor="let itms of qusitionList">
               <i class="fa fa-search" aria-hidden="true"></i>
               <span>{{itms.questionContent}}</span>
               <p>
                 <span  class="a">A</span>
                 <span>{{itms.answerContent}}</span>
               </p>
-            </div>-->
+            </div>
           </div>
         </div>
       </div>
