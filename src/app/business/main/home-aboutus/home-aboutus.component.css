@@ -7,6 +7,7 @@
 }
 .total {
   width: 80%;
+  height: 100%;
 }
 .about-top {
   text-align: center;
@@ -37,6 +38,18 @@
 
 .about-bottom {
   margin-top: 30px;
+  height: 50%;
+}
+.container{
+  height: 100%;
+}
+.container .about-content{
+  height: 100%;
+}
+.about-content-list{
+  height: 80%;
+  display: flex;
+  align-items: center;
 }
 .about-bottom .centerl {
   height: 250px;

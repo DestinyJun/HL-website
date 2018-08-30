@@ -14,7 +14,7 @@ export class HomeCaseComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.logins.getCase({start: 0, length: 6}).subscribe(
+    this.logins.getCase({start: 0, length: 3}).subscribe(
           (value) => {
             this.caseList = value.data;
         });

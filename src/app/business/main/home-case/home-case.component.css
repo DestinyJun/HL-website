@@ -35,8 +35,17 @@
   margin: 0 auto;
 }
 .case-bottom {
+  height: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+.container{
+  height: 100%;
+}
+.case-list{
+  height: 60%;
+  display: flex;
+  align-items: center;
 }
 .center {
   height: 320px;
