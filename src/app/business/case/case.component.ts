@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../../common/services/login.service';
-import {HeaderService} from '../../common/services/header.service';
 import {FormControl} from '@angular/forms';
+import 'rxjs/Rx';
+import {LoginService} from '../../services/login.service';
+import {HeaderService} from '../../services/header.service';
 
 @Component({
   selector: 'app-case',
@@ -26,12 +27,9 @@ export class CaseComponent implements OnInit {
 
   ngOnInit() {
     // 搜索相关
-    this.titleFilter.valueChanges
-      .debounceTime(10)
-      .subscribe(
+    this.titleFilter.valueChanges.subscribe(
         (value) => {
           this.keyWord = value;
-          console.log(value);
         }
       );
     this.header.name.next('案例介绍');
@@ -97,7 +95,6 @@ export class CaseComponent implements OnInit {
         this.caseList = [];
         console.log(value);
         this.caseList = value.data;
-        console.log(value.data.length === 0);
         if (value.data.length === 0) {
           this.newsShow = true;
         } else {

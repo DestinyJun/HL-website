@@ -6,11 +6,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TreeModule} from 'ng2-tree';
 import {CarouselModule} from 'ngx-bootstrap';
 
-import {EventsService} from './services/events.service';
-import {Data3dService} from './services/data3d.service';
-import {CentermapService} from './services/centermap.service';
-import {DiagramService} from './services/diagram.service';
-
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CircleComponent } from './components/circle/circle.component';
@@ -19,8 +14,6 @@ import {HomeContactComponent} from './components/home-contact/home-contact.compo
 import { BannerComponent } from './components/banner/banner.component';
 import { RightNavComponent } from './components/right-nav/right-nav.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
-import {HeaderService} from './services/header.service';
-import { PipesPipe } from './pipes/pipes.pipe';
 
 
 @NgModule({
@@ -33,7 +26,6 @@ import { PipesPipe } from './pipes/pipes.pipe';
     BannerComponent,
     RightNavComponent,
     PaginationComponent,
-    PipesPipe
   ],
   imports: [
     CommonModule,
@@ -59,11 +51,6 @@ import { PipesPipe } from './pipes/pipes.pipe';
     RightNavComponent,
     PaginationComponent
   ],
-  providers: [
-    EventsService,
-    Data3dService,
-    CentermapService,
-    DiagramService
-  ]
+  providers: []
 })
 export class SharedModule { }

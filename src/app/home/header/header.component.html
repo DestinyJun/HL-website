@@ -40,8 +40,8 @@
     </div>
 
     <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-6" aria-expanded="false" style="height: 1px;">
-      <ul class="nav navbar-nav">
-        <li class="text-center" [ngClass]="{'active': item.name==name, 'unactive': !(item.name==name)}" (click)="pullName(item.name)" *ngFor="let item of navList" [routerLink]="[item.url]">
+      <ul class="nav navbar-nav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-6">
+        <li class="text-center"  [ngClass]="{'active': item.name==name, 'unactive': !(item.name==name)}" (click)="pullName(item.name)" *ngFor="let item of navList" [routerLink]="[item.url]">
           <a>{{item.name}}</a>
         </li>
       </ul>

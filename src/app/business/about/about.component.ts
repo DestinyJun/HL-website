@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../../common/services/login.service';
-import {HeaderService} from '../../common/services/header.service';
+import {HeaderService} from '../../services/header.service';
+import {LoginService} from '../../services/login.service';
 // import {start} from 'repl';
 
 @Component({

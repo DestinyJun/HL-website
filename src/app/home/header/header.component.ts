@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {LoginService} from '../../common/services/login.service';
-import {HeaderService} from '../../common/services/header.service';
+import {LoginService} from '../../services/login.service';
+import {HeaderService} from '../../services/header.service';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
     this.header.name.subscribe(
       (name) => {
       this.name = name;
-      console.log(name);
     });
   }
 

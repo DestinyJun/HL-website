@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {LoginService} from '../../../common/services/login.service';
+import {LoginService} from '../../../services/login.service';
 
 @Component({
   selector: 'app-home-case',

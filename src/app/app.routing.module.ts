@@ -5,7 +5,7 @@ const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'home', loadChildren: 'app/home/home.module#HomeModule'},
-  {path: '**', component: LoginComponent}
+  // {path: '**', component: LoginComponent}
 ];
 @NgModule({
   imports: [

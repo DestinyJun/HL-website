@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginService} from '../../common/services/login.service';
-import {HeaderService} from '../../common/services/header.service';
 import {FormControl} from '@angular/forms';
+import {LoginService} from '../../services/login.service';
+import {HeaderService} from '../../services/header.service';
 
 @Component({
   selector: 'app-list',
@@ -19,17 +19,16 @@ export class ListComponent implements OnInit {
   public newsShow = false;
   public sum: number;
   constructor(
-    private logins: LoginService, private header: HeaderService
+    public logins: LoginService, public header: HeaderService
   ) { }
 
   ngOnInit() {
     // 搜索
     this.titleFilter.valueChanges
-      .debounceTime(10)
       .subscribe(
         (value) => {
-          this.keyWord = value;
           console.log(value);
+          this.keyWord = value;
         }
       );
     this.header.name.next('新闻中心');
@@ -60,7 +59,6 @@ export class ListComponent implements OnInit {
         this.paginationShow = false;
         this.newsList = [];
         this.newsList = value.data;
-        console.log(value.data === null);
         if (value.data === null) {
           this.newsShow = true;
         } else {

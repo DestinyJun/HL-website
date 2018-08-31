@@ -2,19 +2,17 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {AppRoutingModule} from './app.routing.module';
-import {SharedModule} from './common/shared.module';
-
-import {LoginGuard} from './common/guard/login.guard';
 import {AppComponent} from './app.component';
-import {LocalStorageService} from './common/services/local-storage.service';
-import {LoginService} from './common/services/login.service';
-import {LoginComponent} from './login/login.component';
-import {HeaderService} from './common/services/header.service';
+import { LoginComponent } from './login/login.component';
+import {HeaderService} from './services/header.service';
+import {LocalStorageService} from './services/local-storage.service';
+import {LoginService} from './services/login.service';
+import {SharedModule} from './common/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +22,8 @@ import {HeaderService} from './common/services/header.service';
   providers: [
     LoginService,
     LocalStorageService,
-    LoginGuard,
     HeaderService,
-    {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })

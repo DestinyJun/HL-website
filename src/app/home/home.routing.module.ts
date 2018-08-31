@@ -7,12 +7,12 @@ const routes: Routes = [
     children: [
       {path: '', redirectTo: 'main', pathMatch: 'full'},
       {path: 'main', loadChildren: 'app/business/main/main.module#MainModule'},
+      {path: 'about', loadChildren: 'app/business/about/about.module#AboutModule'},
       {path: 'list', loadChildren: 'app/business/list/list.module#ListModule'},
       {path: 'case', loadChildren: 'app/business/case/case.module#CaseModule'},
       {path: 'contact', loadChildren: 'app/business/contact/contact.module#ContactModule'},
-      {path: 'about', loadChildren: 'app/business/about/about.module#AboutModule'},
       {path: 'details', loadChildren: 'app/business/details/details.module#DetailsModule'},
-    ]
+]
   },
 ];
 @NgModule({
