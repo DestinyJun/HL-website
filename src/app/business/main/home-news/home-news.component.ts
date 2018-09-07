@@ -18,7 +18,7 @@ export class HomeNewsComponent implements OnInit {
 
   ngOnInit() {
     // 这里是首页新闻
-    this.logins.getNews({start: 3, length: 3}).subscribe(
+    this.logins.getNews({start: 0, length: 3}).subscribe(
       (e) => {
         this.newsList = e.data.news;
       }
