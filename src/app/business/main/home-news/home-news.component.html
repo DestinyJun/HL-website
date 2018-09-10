@@ -29,11 +29,11 @@
           <div class="new-box" *ngIf="flag">
             <div class="newss" *ngFor="let item of newsList" [routerLink]="['/home/details']" [queryParams]="{id:item.id,name:'新闻中心'}">
               <div class="bottom-news">
-                <div class="l">
-                  <span>发布时间</span>
-                  <span>{{item.publishDate | date: 'yyyy-MM-dd' }}</span>
+                <div class="col-md-3 col-sm-4 col-xs-4 " >
+                  <p>发布时间</p>
+                  <p>{{item.publishDate | date: 'yyyy-MM-dd' }}</p>
                 </div>
-                <div class="r">
+                <div class="col-md-9 col-sm-8 col-xs-8">
                   <h4>{{item.newsTitle}}</h4>
                   <p style="margin-top: 10px">{{item.newsSummary}}</p>
                 </div>

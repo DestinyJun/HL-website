@@ -21,6 +21,7 @@ export class HomeNewsComponent implements OnInit {
     this.logins.getNews({start: 0, length: 3}).subscribe(
       (e) => {
         this.newsList = e.data.news;
+        console.log(this.newsList);
       }
     );
     // 这里是轮播新闻
