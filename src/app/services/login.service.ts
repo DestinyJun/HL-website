@@ -8,58 +8,58 @@ export class LoginService {
 
   // 获取头部导航
   public getNavs(): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/navigation/navigation');
+    return this.http.get('http://120.78.156.30:8885/red-bird/navigation/navigation');
   }
   // 获取公司信息
   public getAbouts(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/organization/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/organization/queryByPaging', {params});
   }
   // 获取问题咨询
   public getRefer(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/answer/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/answer/queryByPaging', {params});
   }
 
   // 获取公司案例
   public getCase(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/caseInfo/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/queryByPaging', {params});
   }
   // 获取公司新闻
   public getNews(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/news/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/news/queryByPaging', {params});
   }
   // 获取公司指定案例
   public getCases(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/caseInfo/findOne', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/findOne', {params});
   }
   // 获取轮播图
   public getPhoto(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/photo/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/photo/queryByPaging', {params});
   }
 
   // 指定新闻信息
   public getOnlyNew(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/news/findOne', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/news/findOne', {params});
   }
 
   // 获取友情链接
   public getLink(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/partner/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/partner/queryByPaging', {params});
   }
   // 获取主要人员
   public getPersons(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/staff/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/staff/queryByPaging', {params});
   }
 //  获取主要设计实施的项目
   public getProject(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/caseInfo/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/queryByPaging', {params});
   }
 //  获取未来规划
   public getProgramme(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/organization/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/organization/queryByPaging', {params});
   }
 //  获取banner图
   public getBanner(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/subpage/queryByPaging', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/subpage/queryByPaging', {params});
   }
   //  增加新闻阅读量
   public addNewsCount(params) {
@@ -69,15 +69,15 @@ export class LoginService {
 
   // 新闻关键字搜索
   public getNewsSearch(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/news/seach-news', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/news/seach-news', {params});
   }
 
   // 案例关键字搜索
   public getCaseSearch(params): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/caseInfo/seachCase', {params});
+    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/seachCase', {params});
   }
   // 新闻推荐
   public getNewsRecommend(): Observable<any> {
-    return this.http.get('http://123.249.28.108/red-bird/news/queryHotNews');
+    return this.http.get('http://120.78.156.30:8885/red-bird/news/queryHotNews');
   }
 }
