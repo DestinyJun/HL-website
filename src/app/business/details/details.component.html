@@ -3,18 +3,18 @@
   <div class="container">
     <div class="row content">
       <div class="col-lg-8 col-md-8">
-        <div *ngIf="this.name === '新闻中心'">
-          <h1 class="text-center">{{a?.newsTitle}}</h1>
+        <div *ngIf="this.name === '新闻中心'"><!--循环条件，判断标题名字是否是新闻中心-->
+          <h1 class="text-center">{{a?.newsTitle}}</h1><!--插值表达式，获取新闻标题-->
           <p style="color: #4D4D4D;" class="text-center">
-            <span>红鸟智能</span><span style="margin-left: 15px">{{a?.publishDate | date:'yyyy-MM-dd'}}</span>
-            <span style="margin-left: 15px">阅读量：{{a?.readCount}}</span>
+            <span>红鸟智能</span><span style="margin-left: 15px">{{a?.publishDate | date:'yyyy-MM-dd'}}</span><!--插值表达式，获取新闻发布日期，并用管道语法规范格式-->
+            <span style="margin-left: 15px">阅读量：{{a?.readCount}}</span><!--插值表达式，获取阅读量-->
           </p>
-          <div [innerHTML]="a?.newsContent"></div>
+          <div [innerHTML]="a?.newsContent"></div><!--属性绑定，计算新闻总数-->
         </div>
-        <div *ngIf="this.name === '案例介绍'">
-          <h1 class="text-center">{{a?.caseName}}</h1>
+        <div *ngIf="this.name === '案例介绍'"><!--循环条件，判断标题名字是否是案例介绍-->
+          <h1 class="text-center">{{a?.caseName}}</h1><!--插值表达式，获取案例标题-->
           <p style="color: #4D4D4D;" class="text-center">
-            <span>红鸟智能</span><span style="margin-left: 15px">{{a?.insertTime | date:'yyyy-MM-dd'}}</span>
+            <span>红鸟智能</span><span style="margin-left: 15px">{{a?.insertTime | date:'yyyy-MM-dd'}}</span><!--插值表达式，获取案例发布日期，并用管道语法规范格式-->
           </p>
           <div [innerHTML]="a?.caseContent"></div>
         </div>

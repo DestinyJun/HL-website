@@ -18,12 +18,11 @@ export class CarouselComponent implements OnInit {
   ngOnInit() {
     if (this.carouselShow) {
       this.opacityCarousel = 1;
-    }
+    } /*判断轮播图的显示与否*/
     this.logins.getPhoto({start: 0, length: 3}).subscribe(
       (e) => {
         this.photoList = e.data;
-      }
+      }/*链接轮播图接口，条件满足后设置photoList的内容*/
     );
   }
-
 }

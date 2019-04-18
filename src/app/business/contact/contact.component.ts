@@ -42,13 +42,13 @@ export class ContactComponent implements OnInit {
 
   public contactMap () {
     const map = new BMap.Map('contactMap');
-    map.centerAndZoom(new BMap.Point(106.65686, 26.681732), 14);
-    const points = new BMap.Point(106.65686, 26.681732)
-    const marker = new BMap.Marker(points);
+    map.centerAndZoom(new BMap.Point(106.65686, 26.681732), 14);  // 设置地图中心点
+    const points = new BMap.Point(106.65686, 26.681732); /*标记点初始化*/
+    const marker = new BMap.Marker(points); /*标记点*/
     map.addOverlay(marker);
     marker.addEventListener('click', function () {
-      const name = `<div><p style="color: rgb(252,67,46)">贵阳红鸟技术服务有限公司</p><p>地址：贵州省贵阳市白云区云城尚品19栋</p><p>电话：13984822555</p></div>`;
-      const windows = new BMap.InfoWindow(name);
+      const name = `<div><p style="color: rgb(252,67,46)">贵阳红鸟技术服务有限公司</p><p>地址：贵州省贵阳市白云区云城尚品19栋</p><p>电话：13984822555</p></div>`;/*设定显示标签的内容*/
+      const windows = new BMap.InfoWindow(name); /*标签初始化*/
       this.openInfoWindow(windows);
     });
 

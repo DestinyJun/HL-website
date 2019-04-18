@@ -1,7 +1,10 @@
-<div  class="banner" data-ride="carousel" [ngStyle]="{'height': h + 'px'}">
+<div  class="banner" data-ride="carousel" [ngStyle]="{'height': h + 'px'}"> <!--属性绑定，设定轮播图的高度-->
   <carousel>
-    <slide *ngFor="let item of photoList">
-     <div style="background:no-repeat center center;-webkit-background-size: cover;background-size: cover;" [ngStyle]="{'height': h + 'px','background-image': 'url('+item.imgUrl+')'}"></div>
+    <slide *ngFor="let item of photoList"> <!--循环轮播图图片为photoList里面的内容-->
+     <div style="background:no-repeat center center;-webkit-background-size: cover;
+     background-size: cover;" [ngStyle]="{'height': h + 'px','background-image': 'url('+item.imgUrl+')'}">
+     </div>
+      <!--设定行内样式，给轮播图设置CSS样式-->
     </slide>
   </carousel>
 </div>
