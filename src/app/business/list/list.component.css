@@ -39,6 +39,9 @@
 .main-right .subject {
 
 }
+.form-inline {
+  margin-bottom: 5vh;
+}
 @media (max-width: 993px) {
   .list-left {
     display: none;

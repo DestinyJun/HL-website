@@ -74,8 +74,8 @@ export class LoginService {
 
   // 案例关键字搜索
   public getCaseSearch(params): Observable<any> {
-    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/seachCase', {params});
-  }
+    return this.http.get('http://120.78.156.30:8885/red-bird/caseInfo/search-cases', {params});
+ }
   // 新闻推荐
   public getNewsRecommend(): Observable<any> {
     return this.http.get('http://120.78.156.30:8885/red-bird/news/queryHotNews');

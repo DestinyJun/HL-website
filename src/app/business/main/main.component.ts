@@ -106,8 +106,6 @@ export class MainComponent implements OnInit {
         }
       }
     }
-
-
     if (this.divhei === 0) {
       this.carouselShow = true;
     } else if (this.divhei === -this.h) {

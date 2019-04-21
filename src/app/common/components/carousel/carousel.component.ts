@@ -8,6 +8,7 @@ import {LoginService} from '../../../services/login.service';
 })
 export class CarouselComponent implements OnInit {
   public photoList: any;
+  public carouselList: any;
   public opacityCarousel = 0;
   @Input() h: number;
   @Input() carouselShow: boolean;
@@ -16,6 +17,11 @@ export class CarouselComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+/*    this.carouselList = [
+      {url: '/assets/1.jpg'},
+      {url: '/assets/2.jpg'},
+      {url: '/assets/3.jpg'},
+    ];*/
     if (this.carouselShow) {
       this.opacityCarousel = 1;
     } /*判断轮播图的显示与否*/

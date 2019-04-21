@@ -46,6 +46,7 @@ export class CaseComponent implements OnInit {
           }
         );
         this.picture = a[0].pageUrl;
+        // this.picture = '/assets/2018221142159_MZ33z.jpeg';
       });
     this.logins.getCase({start: this.startNumber, length: 6}).subscribe(
       value => {
@@ -89,13 +90,14 @@ export class CaseComponent implements OnInit {
   }
   // 搜索相关点击事件
   public onClick(): void {
-    this.logins.getCaseSearch({question: this.keyWord}).subscribe(
+    console.log(1);
+    this.logins.getCaseSearch({searchContent: this.keyWord}).subscribe(
       (value) => {
         this.paginationShow = false;
         this.caseList = [];
         console.log(value);
         this.caseList = value.data;
-        if (value.data.length === 0) {
+        if (!value.data) {
           this.newsShow = true;
         } else {
           this.newsShow = false;

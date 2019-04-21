@@ -37,6 +37,7 @@ export class ContactComponent implements OnInit {
           }
         );
         this.picture = a[0].pageUrl;
+        // this.picture = '/assets/2018221142159_MZ33z.jpeg';
       });
   }
 

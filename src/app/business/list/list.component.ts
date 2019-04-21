@@ -27,7 +27,6 @@ export class ListComponent implements OnInit {
     this.titleFilter.valueChanges
       .subscribe(
         (value) => {
-          console.log(value);
           this.keyWord = value;
         }
       );
@@ -53,6 +52,7 @@ export class ListComponent implements OnInit {
         this.sum = Math.ceil(value.data.sumCounts / 3);
       });
   }
+  //友情提示显示与隐藏
   public onClick(): void {
     this.logins.getNewsSearch({question: this.keyWord}).subscribe(
       (value) => {

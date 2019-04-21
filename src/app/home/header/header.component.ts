@@ -11,7 +11,7 @@ import {HeaderService} from '../../services/header.service';
 export class HeaderComponent implements OnInit {
   public test: any;
   name = '网站首页';
-  public navList = [
+  public  navList = [
     {name: '网站首页', url: '/home'},
     {name: '关于我们', url: '/home/about'},
     {name: '新闻中心', url: '/home/list'},
